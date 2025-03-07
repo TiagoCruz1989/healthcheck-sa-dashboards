@@ -111,6 +111,7 @@
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 5
     col: 8
     width: 4
@@ -156,6 +157,7 @@
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 5
     col: 12
     width: 3
@@ -232,6 +234,7 @@
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 5
     col: 21
     width: 3
@@ -333,6 +336,7 @@
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 20
     col: 8
     width: 8
@@ -434,6 +438,7 @@
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 20
     col: 0
     width: 8
@@ -510,6 +515,7 @@
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 7
     col: 8
     width: 8
@@ -591,6 +597,7 @@
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 5
     col: 0
     width: 8
@@ -690,6 +697,7 @@
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 12
     col: 8
     width: 8
@@ -773,6 +781,7 @@
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 12
     col: 0
     width: 8
@@ -874,6 +883,7 @@
       Explore: query.view
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 20
     col: 16
     width: 8
@@ -1041,6 +1051,7 @@
       Explore: query.view
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
+      Dialect: history.dialect
     row: 44
     col: 0
     width: 24
@@ -1227,8 +1238,7 @@
     series_text_format:
       pivots_used: {}
     conditional_formatting: [{type: along a scale..., value: !!null '', background_color: "#0666EB",
-        font_color: !!null '',
-        bold: false, italic: false, strikethrough: false, fields: []}]
+        font_color: !!null '', bold: false, italic: false, strikethrough: false, fields: []}]
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_y_axis_labels: true
@@ -1334,12 +1344,12 @@
     listen:
       Status: history.status
       Created Date: history.created_date
-      Dialect: history.dialect
       Model: query.model
       Explore: query.view
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
+      Dialect: history.dialect
     row: 5
     col: 15
     width: 3
@@ -1420,7 +1430,6 @@
   - name: " (5)"
     type: text
     title_text: ''
-    subtitle_text: ''
     body_text: |-
       <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 60px">
         <a style="padding: 5px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;" href="/dashboards/healthcheck::google_pso__performance_metrics?">Performance Metrics</a>
