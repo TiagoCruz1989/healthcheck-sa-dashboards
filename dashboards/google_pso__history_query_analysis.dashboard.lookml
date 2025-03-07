@@ -2376,16 +2376,11 @@
   - name: Dialect
     title: Dialect
     type: field_filter
-    default_value: postgres,trino
     allow_multiple_values: true
     required: false
     ui_config:
       type: tag_list
       display: popover
-      options:
-      - postgres
-      - trino
-      - bigquery_standard_sql
     model: system__activity
     explore: query_metrics
     listens_to_filters: []

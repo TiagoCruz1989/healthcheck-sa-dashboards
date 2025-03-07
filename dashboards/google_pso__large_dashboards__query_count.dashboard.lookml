@@ -380,7 +380,6 @@
       query.model: ''
       user.name: ''
       role.name: ''
-      history.dialect: postgres,trino
     sorts: [history.dashboard_run_count desc]
     limit: 10
     column_limit: 50
@@ -443,7 +442,6 @@
       query.model: ''
       user.name: ''
       role.name: ''
-      history.dialect: postgres,trino
     sorts: [history.database_result_query_count desc]
     limit: 10
     column_limit: 50
@@ -567,7 +565,6 @@
       query.model: ''
       user.name: ''
       role.name: ''
-      history.dialect: postgres,trino
     sorts: [history.database_result_query_count desc 5, history.runtime_tiers]
     limit: 10
     column_limit: 50

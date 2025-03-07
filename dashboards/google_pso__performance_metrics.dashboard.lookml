@@ -47,10 +47,10 @@
     conditional_formatting_include_nulls: false
     single_value_title: Average Async Runtime
     conditional_formatting: [{type: greater than, value: 9.999, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}, {type: greater
           than, value: 14.9999, background_color: "#FFFFFF", font_color: "#F54C3E",
-        
+
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     note_state: collapsed
@@ -183,7 +183,7 @@
     single_value_title: Acquire Connection Time
     comparison_label: Acquire Connection Queries
     conditional_formatting: [{type: greater than, value: 0.2383, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -449,7 +449,7 @@
     single_value_title: 'Explore Init: Compute'
     comparison_label: Explore Init Queries
     conditional_formatting: [{type: greater than, value: 0.2333, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -535,7 +535,7 @@
     single_value_title: 'Model Init: Compute'
     comparison_label: Model Init Queries
     conditional_formatting: [{type: greater than, value: 2.4399, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -621,7 +621,7 @@
     single_value_title: Prepare Average
     comparison_label: Prepare Queries
     conditional_formatting: [{type: greater than, value: 0.4389, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -707,10 +707,10 @@
     single_value_title: Main Query Execution Time
     comparison_label: 'Model Init: From Cache'
     conditional_formatting: [{type: greater than, value: 4.9999, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}, {type: greater
           than, value: !!null '', background_color: "#FFFFFF", font_color: "#F54C3E",
-        
+
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -795,7 +795,7 @@
     single_value_title: Post Processing - Stream to Cache Time
     comparison_label: Stream To Cache Queries
     conditional_formatting: [{type: greater than, value: 0.2234, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -983,7 +983,7 @@
     single_value_title: Average Project Init
     comparison_label: Project Init Queries
     conditional_formatting: [{type: greater than, value: 0.1, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     show_view_names: false
     show_row_numbers: true
@@ -2160,7 +2160,7 @@
     single_value_title: 'Model Init: Cache'
     comparison_label: Model Init Queries
     conditional_formatting: [{type: greater than, value: 1, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -2244,7 +2244,7 @@
     single_value_title: 'Explore Init: Cache'
     comparison_label: Explore Init Queries
     conditional_formatting: [{type: greater than, value: 0.3513, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -3524,7 +3524,7 @@
     single_value_title: Load Process and Stream Main Query
     comparison_label: Load Process & Stream Main Query Count
     conditional_formatting: [{type: greater than, value: 0.2383, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -3591,7 +3591,7 @@
     single_value_title: Load Main Query in Memory
     comparison_label: Load Main Query Queries
     conditional_formatting: [{type: greater than, value: 0.2383, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -3665,7 +3665,7 @@
     single_value_title: Load Grand Totals In Memory Queries
     comparison_label: Load Grand Totals Queries
     conditional_formatting: [{type: greater than, value: 0.2383, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -3748,7 +3748,7 @@
     single_value_title: Load Total Query in Memory
     comparison_label: Load Totals Queries
     conditional_formatting: [{type: greater than, value: 0.2383, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -3829,7 +3829,7 @@
     single_value_title: Load Row Totals Query in Memory
     comparison_label: Load Row Totals Queries
     conditional_formatting: [{type: greater than, value: 0.2383, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -3910,7 +3910,7 @@
     single_value_title: Cache Load
     comparison_label: Cache Load Queries
     conditional_formatting: [{type: greater than, value: 0.2383, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -3992,7 +3992,7 @@
     single_value_title: Post Processing Time
     comparison_label: Post Processing Queries
     conditional_formatting: [{type: greater than, value: 0.2234, background_color: "#FFFFFF",
-        font_color: "#F7930D", 
+        font_color: "#F7930D",
         bold: false, italic: false, strikethrough: false, fields: !!null ''}]
     defaults_version: 1
     hidden_pivots: {}
@@ -4337,10 +4337,6 @@
     ui_config:
       type: advanced
       display: popover
-      options:
-      - postgres
-      - trino
-      - bigquery_standard_sql
     model: system__activity
     explore: history
     listens_to_filters: []
