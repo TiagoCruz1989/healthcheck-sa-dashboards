@@ -78,6 +78,7 @@
       Explore: query.view
       Dashboard Creator: user.name
       Dashboard Name: dashboard.title
+      Created Date: query.created_date
     row: 7
     col: 16
     width: 8
@@ -112,6 +113,7 @@
       Dashboard Name: dashboard.title
       Source: history.result_source
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 5
     col: 8
     width: 4
@@ -124,7 +126,6 @@
     fields: [history.average_runtime]
     filters:
       history.source: '"merge_query"'
-      query.created_date: 90 days
     limit: 500
     column_limit: 50
     dynamic_fields:
@@ -150,7 +151,6 @@
     defaults_version: 1
     listen:
       Status: history.status
-      Created Date: history.created_date
       Moved to Trash (Yes / No): dashboard.moved_to_trash
       Model: query.model
       Explore: query.view
@@ -158,16 +158,17 @@
       Dashboard Name: dashboard.title
       Source: history.result_source
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 5
-    col: 12
+    col: 15
     width: 3
     height: 2
-  - title: Dashboards with Merged Queries (Used last 30 days)
-    name: Dashboards with Merged Queries (Used last 30 days)
+  - title: Dashboards with Merged Queries
+    name: Dashboards with Merged Queries (2)
     model: system__activity
     explore: dashboard
     type: single_value
-    fields: [filtered_history_dashboards.dashboards_used_last_30, dashboard.count]
+    fields: [dashboard.count]
     filters:
       dashboard_element.result_source: Merge Query
     limit: 500
@@ -200,8 +201,9 @@
       Model: query.model
       Explore: query.view
       Dashboard Name: dashboard.title
+      Created Date: merge_query.created_date
     row: 5
-    col: 18
+    col: 21
     width: 3
     height: 2
   - title: Merged Queries Past 90 Days
@@ -212,7 +214,6 @@
     fields: [query.count]
     filters:
       history.source: '"merge_query"'
-      query.created_date: 90 days
     limit: 500
     column_limit: 50
     custom_color_enabled: true
@@ -236,7 +237,7 @@
       Source: history.result_source
       Dialect: history.dialect
     row: 5
-    col: 21
+    col: 12
     width: 3
     height: 2
   - title: Merged Queries By Model
@@ -329,7 +330,6 @@
     defaults_version: 1
     listen:
       Status: history.status
-      Created Date: history.created_date
       Moved to Trash (Yes / No): dashboard.moved_to_trash
       Model: query.model
       Explore: query.view
@@ -337,6 +337,7 @@
       Dashboard Name: dashboard.title
       Source: history.result_source
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 20
     col: 8
     width: 8
@@ -431,7 +432,6 @@
     defaults_version: 1
     listen:
       Status: history.status
-      Created Date: history.created_date
       Moved to Trash (Yes / No): dashboard.moved_to_trash
       Model: query.model
       Explore: query.view
@@ -439,6 +439,7 @@
       Dashboard Name: dashboard.title
       Source: history.result_source
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 20
     col: 0
     width: 8
@@ -452,7 +453,6 @@
     pivots: [history.dialect]
     fill_fields: [query.created_date]
     filters:
-      query.created_date: 90 days
       history.source: '"merge_query"'
     sorts: [history.dialect, query.created_date desc]
     limit: 500
@@ -481,18 +481,8 @@
     y_axis_combined: true
     show_null_points: true
     interpolation: monotone
-    y_axes: [{label: '', orientation: left, series: [{axisId: history.query_run_count,
-            id: exasol - history.query_run_count, name: exasol}, {axisId: history.query_run_count,
-            id: trino - history.query_run_count, name: trino}], showLabels: true,
-        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear}]
     x_axis_zoom: true
     y_axis_zoom: true
-    series_colors:
-      trino - history.query_run_count: "#00ABFA"
-    series_labels:
-      exasol - history.query_run_count: Helios
-      trino - history.query_run_count: Zeus
     reference_lines: []
     trend_lines: []
     custom_color_enabled: true
@@ -508,7 +498,6 @@
     defaults_version: 1
     listen:
       Status: history.status
-      Created Date: history.created_date
       Moved to Trash (Yes / No): dashboard.moved_to_trash
       Model: query.model
       Explore: query.view
@@ -516,6 +505,7 @@
       Dashboard Name: dashboard.title
       Source: history.result_source
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 7
     col: 8
     width: 8
@@ -528,7 +518,6 @@
     fields: [history.dialect, query.count]
     pivots: [history.dialect]
     filters:
-      query.created_date: 90 days
       history.source: '"merge_query"'
     sorts: [history.dialect]
     limit: 500
@@ -560,19 +549,8 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: '', orientation: left, series: [{axisId: history.query_run_count,
-            id: exasol - history.query_run_count, name: exasol}, {axisId: history.query_run_count,
-            id: trino - history.query_run_count, name: trino}], showLabels: true,
-        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear}]
     x_axis_zoom: true
     y_axis_zoom: true
-    series_colors:
-      trino - history.query_run_count: "#00ABFA"
-      trino - query.count: "#00ABFA"
-    series_labels:
-      exasol - query.count: Helios
-      trino - query.count: Zeus
     reference_lines: []
     trend_lines: []
     show_null_points: true
@@ -590,7 +568,6 @@
     defaults_version: 1
     listen:
       Status: history.status
-      Created Date: history.created_date
       Moved to Trash (Yes / No): dashboard.moved_to_trash
       Model: query.model
       Explore: query.view
@@ -598,6 +575,7 @@
       Dashboard Name: dashboard.title
       Source: history.result_source
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 5
     col: 0
     width: 8
@@ -611,22 +589,11 @@
     pivots: [history.dialect]
     fill_fields: [query.created_date]
     filters:
-      query.created_date: 20 days
+      query.created_date: 500 days
       history.source: '"merge_query"'
     sorts: [history.dialect, query.created_date desc]
     limit: 500
     column_limit: 50
-    dynamic_fields:
-    - category: table_calculation
-      expression: if(${history.dialect} = "trino", ${history.average_runtime}*-1,
-        null)
-      label: trino
-      value_format:
-      value_format_name:
-      _kind_hint: measure
-      table_calculation: trino
-      _type_hint: number
-      is_disabled: true
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
@@ -654,21 +621,8 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: '', orientation: left, series: [{axisId: history.query_run_count,
-            id: exasol - history.query_run_count, name: exasol}, {axisId: history.query_run_count,
-            id: trino - history.query_run_count, name: trino}], showLabels: true,
-        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear}]
     x_axis_zoom: true
     y_axis_zoom: true
-    series_colors:
-      trino - history.query_run_count: "#00ABFA"
-      trino - trino: "#00ABFA"
-      trino - history.average_runtime: "#00ABFA"
-      exasol - history.average_runtime: "#0666EB"
-    series_labels:
-      exasol - history.average_runtime: Helios
-      trino - history.average_runtime: Zeus
     reference_lines: []
     trend_lines: []
     show_null_points: true
@@ -682,15 +636,9 @@
     enable_conditional_formatting: false
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
-    hidden_pivots:
-      exasol:
-        measure_names: []
-      trino:
-        measure_names: []
     defaults_version: 1
     listen:
       Status: history.status
-      Created Date: history.created_date
       Moved to Trash (Yes / No): dashboard.moved_to_trash
       Model: query.model
       Explore: query.view
@@ -698,6 +646,7 @@
       Dashboard Name: dashboard.title
       Source: history.result_source
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 12
     col: 8
     width: 8
@@ -710,7 +659,6 @@
     fields: [history.dialect, history.query_run_count]
     pivots: [history.dialect]
     filters:
-      query.created_date: 90 days
       history.source: '"merge_query"'
     sorts: [history.dialect]
     limit: 500
@@ -742,18 +690,8 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: '', orientation: left, series: [{axisId: history.query_run_count,
-            id: exasol - history.query_run_count, name: exasol}, {axisId: history.query_run_count,
-            id: trino - history.query_run_count, name: trino}], showLabels: true,
-        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear}]
     x_axis_zoom: true
     y_axis_zoom: true
-    series_colors:
-      trino - history.query_run_count: "#00ABFA"
-    series_labels:
-      exasol - history.query_run_count: Helios
-      trino - history.query_run_count: Zeus
     reference_lines: []
     trend_lines: []
     show_null_points: true
@@ -774,7 +712,6 @@
     note_text: The Total number of queries run originating from Merged Query
     listen:
       Status: history.status
-      Created Date: history.created_date
       Moved to Trash (Yes / No): dashboard.moved_to_trash
       Model: query.model
       Explore: query.view
@@ -782,6 +719,7 @@
       Dashboard Name: dashboard.title
       Source: history.result_source
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 12
     col: 0
     width: 8
@@ -877,13 +815,13 @@
     defaults_version: 1
     listen:
       Status: history.status
-      Created Date: history.created_date
       Moved to Trash (Yes / No): dashboard.moved_to_trash
       Model: query.model
       Explore: query.view
       Dashboard Name: dashboard.title
       Source: history.result_source
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 20
     col: 16
     width: 8
@@ -1045,13 +983,13 @@
     hidden_fields: []
     listen:
       Status: history.status
-      Created Date: history.created_date
       Moved to Trash (Yes / No): dashboard.moved_to_trash
       Model: query.model
       Explore: query.view
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 44
     col: 0
     width: 24
@@ -1272,6 +1210,7 @@
       Model: query.model
       Explore: query.view
       Dashboard Name: dashboard.title
+      Created Date: query.created_date
     row: 38
     col: 0
     width: 24
@@ -1343,15 +1282,15 @@
     hidden_fields: [history.query_run_count, filtered_historyquery_run_count]
     listen:
       Status: history.status
-      Created Date: history.created_date
       Model: query.model
       Explore: query.view
       Dashboard Creator: dashboard_creator.name
       Dashboard Name: dashboard.title
       Source: history.result_source
       Dialect: history.dialect
+      Created Date: history.created_date
     row: 5
-    col: 15
+    col: 18
     width: 3
     height: 2
   - title: Alert Details - Dashboard (in the past 7 complete days)
