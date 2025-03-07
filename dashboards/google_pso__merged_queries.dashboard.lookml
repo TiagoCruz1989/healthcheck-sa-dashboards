@@ -1227,7 +1227,7 @@
     series_text_format:
       pivots_used: {}
     conditional_formatting: [{type: along a scale..., value: !!null '', background_color: "#0666EB",
-        font_color: !!null '', 
+        font_color: !!null '',
         bold: false, italic: false, strikethrough: false, fields: []}]
     x_axis_gridlines: false
     y_axis_gridlines: true
@@ -1537,8 +1537,6 @@
     ui_config:
       type: tag_list
       display: popover
-      options:
-      - bigquery
     model: system__activity
     explore: history
     listens_to_filters: []
