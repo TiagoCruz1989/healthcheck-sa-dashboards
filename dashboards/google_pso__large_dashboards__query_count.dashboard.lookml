@@ -54,14 +54,13 @@
       Model: query.model
       Explore: query.view
       Dashboard: dashboard.title
-    row: 48
+    row: 34
     col: 0
     width: 24
     height: 23
   - name: ''
     type: text
     title_text: ''
-    subtitle_text: ''
     body_text: |-
       <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 60px">
         <a style="padding: 5px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;" href="/dashboards/healthcheck::google_pso__performance_metrics?">Performance Metrics</a>
@@ -225,6 +224,7 @@
         _type_hint: number
         filters:
           dashboard_element.refresh_interval_ordered: not null
+      join_fields: []
     - model: system__activity
       explore: history
       type: table
@@ -301,6 +301,7 @@
     hidden_fields: [dashboard.id, history.database_result_query_count]
     type: looker_bar
     sorts: [history.query_run_count desc]
+    column_limit: 50
     listen:
     - Model: query.model
       Explore: query.view
@@ -549,129 +550,6 @@
     col: 12
     width: 12
     height: 17
-  - title: Dashboards by 5 Minute Queries
-    name: Dashboards by 5 Minute Queries
-    model: system__activity
-    explore: history
-    type: looker_bar
-    fields: [dashboard.title, history.database_result_query_count, history.average_runtime,
-      history.runtime_tiers]
-    pivots: [history.runtime_tiers]
-    filters:
-      history.workspace_id: production
-      history.result_source: query
-      history.average_runtime: NOT NULL
-      query.view: ''
-      query.model: ''
-      user.name: ''
-      role.name: ''
-    sorts: [history.database_result_query_count desc 5, history.runtime_tiers]
-    limit: 10
-    column_limit: 50
-    dynamic_fields:
-    - category: measure
-      label: Error Results from Database
-      based_on: history.database_result_query_count
-      _kind_hint: measure
-      measure: error_results_from_database
-      type: count_distinct
-      _type_hint: number
-      filters:
-        history.status: error
-    - category: measure
-      label: Killed Results from Database
-      based_on: history.database_result_query_count
-      _kind_hint: measure
-      measure: killed_results_from_database
-      type: count_distinct
-      _type_hint: number
-      filters:
-        history.status: killed
-    - category: measure
-      label: Error Results from Cache
-      based_on: history.cache_result_query_count
-      _kind_hint: measure
-      measure: error_results_from_cache
-      type: count_distinct
-      _type_hint: number
-      filters:
-        history.status: error
-    - category: measure
-      label: Killed Results from Cache
-      based_on: history.cache_result_query_count
-      _kind_hint: measure
-      measure: killed_results_from_cache
-      type: count_distinct
-      _type_hint: number
-      filters:
-        history.status: error
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: normal
-    limit_displayed_rows: false
-    legend_position: center
-    point_style: none
-    show_value_labels: true
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    y_axes: [{label: !!null '', orientation: top, series: [{axisId: error_results_from_database,
-            id: error_results_from_database, name: Error Results from Database}],
-        showLabels: true, showValues: true, unpinAxis: false, tickDensity: default,
-        tickDensityCustom: 5, type: linear}, {label: '', orientation: bottom, series: [
-          {axisId: error_rate, id: error_rate, name: Error Rate}], showLabels: true,
-        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear}]
-    x_axis_zoom: true
-    y_axis_zoom: true
-    font_size: '12'
-    show_row_numbers: true
-    transpose: false
-    truncate_text: true
-    hide_totals: false
-    hide_row_totals: false
-    size_to_fit: true
-    table_theme: white
-    enable_conditional_formatting: false
-    header_text_alignment: left
-    header_font_size: '12'
-    rows_font_size: '12'
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    defaults_version: 1
-    value_labels: legend
-    label_type: labPer
-    hidden_pivots: {}
-    minimum_column_width: 75
-    show_sql_query_menu_options: false
-    show_totals: true
-    show_row_totals: true
-    truncate_header: false
-    hidden_fields: [history.database_result_query_count]
-    listen:
-      Created Date: history.created_date
-      Dashboard: dashboard.title
-    row: 34
-    col: 0
-    width: 24
-    height: 14
   filters:
   - name: Created Date
     title: Created Date
