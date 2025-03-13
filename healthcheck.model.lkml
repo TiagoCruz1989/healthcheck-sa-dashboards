@@ -1,3 +1,3 @@
-connection: "sample_bigquery_connection"
+connection: "prod-core-exp"
 
 include: "/dashboards/*.dashboard.lookml"
